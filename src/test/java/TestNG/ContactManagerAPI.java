@@ -1,18 +1,16 @@
 package TestNG;
 import com.github.javafaker.service.RandomService;
-import devices.DeviceFarm;
+import Devices.DeviceFarm;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
-import method.ContactPagemethod;
+import Method.ContactPagemethod;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pages.AddContactPage;
-import pages.HomePage;
-import utilityy.DeviceFarmUtility;
-import com.github.javafaker.Faker;
+import Pages.AddContactPage;
+import Pages.HomePage;
+import Utility.DeviceFarmUtility;
 import com.github.javafaker.service.FakeValuesService;
 
 import java.io.File;

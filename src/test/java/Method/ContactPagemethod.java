@@ -1,13 +1,9 @@
-package method;
+package Method;
 
 import TestNG.ContactManagerAPI;
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
-import pages.AddContactPage;
-
-import java.util.concurrent.TimeUnit;
+import Pages.AddContactPage;
 
 
 /**

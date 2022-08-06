@@ -1,4 +1,4 @@
-package pages;
+package Pages;
 
 import TestNG.ContactManagerAPI;
 import io.appium.java_client.MobileElement;
