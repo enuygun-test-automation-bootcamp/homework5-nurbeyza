@@ -1,0 +1,24 @@
+Nedir ve Ne İşe Yarar?
+Charles Web Debugging Proxy, Java ile yazılmış, platformlar arası bir HTTP/HTTPS hata ayıklama proxy sunucusu uygulamasıdır.
+
+Mobil veya Web tarayıcısının internet’e Charles üzerinden erişecek şekilde yapılandırılır ve daha sonra gönderilen ve alınan tüm verileri sizin için kaydedebilir ve görüntüleyebilir.
+
+Web veya Mobil uygulamaları geliştirmelerinde, web tarayıcınız / mobil uygulamanız ve sunucu arasında neler gönderildiğini ve alındığını(Logları) göremezsiniz.
+Bu görünürlük olmadan, hatanın nerede olduğunu belirlemek zor ve oldukça zaman alıcıdır.
+Charles, web tarayıcınız / mobil uygulamanız ve sunucu arasında neler gönderildiğini görmeyi kolaylaştırır, böylece sorunları hızla teşhis edip çözebilirsiniz.
+
+
+Mobil cihazlarla nasıl bağlantı kurulur?
+Yapmamız gerekenler;
+
+1. Charles üzerinden SSL Proxy Settings üzerinden Host ve Port’u ayarlamak.
+
+2. Bilgisayarımızı ve telefonumuzu “Aynı kablosuz ağa bağlamak”.
+
+3. Bilgisayarımızda görünen IP adresi ve Port numarasını telefona proxy olarak eklemek.
+
+4. Ardından iOS için safariden https://chls.pro/ssl adresinden SSL sertifikasını indirmek.
+
+5. Telefon ayarlarından “SSL sertifikasına güven” diyerek doğrulamak.
+
+
