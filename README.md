@@ -12,6 +12,7 @@ Derste kurulan yapı geliştirilerek oluşturulan test caseler için testler yaz
 * Pages
 * TestNG
 * Utilityy
+
 #Resources
 * apps
 * capabilities
