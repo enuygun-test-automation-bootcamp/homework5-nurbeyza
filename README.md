@@ -5,4 +5,5 @@ ContactManager.apk uygulaması için mobil testler yazıldı.
 Derste kurulan yapı geliştirilerek oluşturulan test caseler için testler yazıldı.
 
 ## Proje için kurulan yapı aşağıda belirtilmiştir.
-# cm
+Test package altında oluşturulan yapı aşağıdaki gibidir.
+* [devices](#devices)
