@@ -7,6 +7,8 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import lombok.Data;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 
 @Data
 public class HomePage {
@@ -25,7 +27,7 @@ public class HomePage {
     private MobileElement invisibleCheck;
 
     //kayıt olan kullanıcının kontrolü için element bilgisi
-    @AndroidFindBy(xpath = "(//android.widget.TextView[@content-desc=\"false\"])[1]")
-    private MobileElement userAdd;
+    @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.ListView")
+    private List<MobileElement> userAdd;
 
 }
