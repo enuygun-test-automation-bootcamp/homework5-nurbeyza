@@ -23,12 +23,12 @@ Devices package altında <b>DevicesFarm</b> isimli bir enum oluşturulmuştur. B
 
 ## Method
 Method package altında <b>ContactPagemethod</b> isimli bir java class oluşturulmuştur. Bu sınıf içerisinde testlerimizde kullandığımız methodlar yazılmıştır.   
- 
-<details>
+
+💬<details>
 <summary><h4>Methodları görüntülemek için tıklayın</h4></summary>
 
 ```java
-💬public void Name(String name){
+public void Name(String name){
         addContactPage.getContactNameField().setValue(name);
     }
     
@@ -45,8 +45,8 @@ Method package altında <b>ContactPagemethod</b> isimli bir java class oluşturu
 ## Pages
 Devices package altında <b>Contactpage</b>  ve <b>Homepage</b> isimli 2 java class bulunmaktadır. Bu sınıflar içerisinde Home ve Contact sayfalarında bulunan elementlerin id veya xpath kullanarak locators'larını alarak bir mobil element içerisine atıyoruz.
 
-<details>
-💬 <summary><h4>Örnek bir element bulmayı görüntülemek için tıklayın</h4></summary>
+💬<details>
+ <summary><h4>Örnek bir element bulmayı görüntülemek için tıklayın</h4></summary>
 
 ```java
   @AndroidFindBy(id = "android:id/title")
@@ -61,8 +61,8 @@ Devices package altında <b>Contactpage</b>  ve <b>Homepage</b> isimli 2 java cl
 ## TestNG
 TestNG package altında testlerden önce gerçekleştirdiğimiz adımlar(device bağlantısı, uygulamayı açma vb.) ve testlerimiz bulunmaktadır.
 
-<details>
-💬 <summary><h4>Örnek bir test görüntülemek için tıklayın</h4></summary>
+💬<details>
+ <summary><h4>Örnek bir test görüntülemek için tıklayın</h4></summary>
 
 ```java
   public void openAddContactOnOreo() throws NullPointerException, InterruptedException {
