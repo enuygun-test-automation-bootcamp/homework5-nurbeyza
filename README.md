@@ -28,7 +28,7 @@ Method package altında <b>ContactPagemethod</b> isimli bir java class oluşturu
 <summary><h4>Methodları görüntülemek için tıklayın</h4></summary>
 
 ```java
-public void Name(String name){
+💬public void Name(String name){
         addContactPage.getContactNameField().setValue(name);
     }
     
@@ -46,7 +46,7 @@ public void Name(String name){
 Devices package altında <b>Contactpage</b>  ve <b>Homepage</b> isimli 2 java class bulunmaktadır. Bu sınıflar içerisinde Home ve Contact sayfalarında bulunan elementlerin id veya xpath kullanarak locators'larını alarak bir mobil element içerisine atıyoruz.
 
 <details>
-<summary><h4>Örnek bir element bulmayı görüntülemek için tıklayın</h4></summary>
+💬 <summary><h4>Örnek bir element bulmayı görüntülemek için tıklayın</h4></summary>
 
 ```java
   @AndroidFindBy(id = "android:id/title")
@@ -62,7 +62,7 @@ Devices package altında <b>Contactpage</b>  ve <b>Homepage</b> isimli 2 java cl
 TestNG package altında testlerden önce gerçekleştirdiğimiz adımlar(device bağlantısı, uygulamayı açma vb.) ve testlerimiz bulunmaktadır.
 
 <details>
-<summary><h4>Örnek bir test görüntülemek için tıklayın</h4></summary>
+💬 <summary><h4>Örnek bir test görüntülemek için tıklayın</h4></summary>
 
 ```java
   public void openAddContactOnOreo() throws NullPointerException, InterruptedException {
@@ -75,10 +75,10 @@ TestNG package altında testlerden önce gerçekleştirdiğimiz adımlar(device 
 </details>
 
 
-## apps
+## Apps
 Apps package altında test apk bulunmaktadır.
 
-## capabilities
+## Capabilities
 Capabilities package altında kullandığımız device için yazılan json formatında veriler yer almaktadır.
 
 ## Charlesproxy
