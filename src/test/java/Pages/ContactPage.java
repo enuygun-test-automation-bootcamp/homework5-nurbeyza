@@ -9,9 +9,11 @@ import lombok.Data;
 import org.openqa.selenium.support.PageFactory;
 
 
+/**
+ * Contact sayfasına ait elementleri bu sınıf içerisinde bulduk
+ */
 @Data
 public class ContactPage {
-
 
 
     public ContactPage(){

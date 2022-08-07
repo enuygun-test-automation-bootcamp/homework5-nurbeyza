@@ -19,7 +19,7 @@ Derste kurulan yapı geliştirilerek oluşturulan test caseler için testler yaz
 * [Charlesproxy](#charlesproxy)
 
 ## Devices
-Devices package altında <b>DevicesFarm</b> isimli bir enum oluşturulmuştur. Bu enum içerisinde kullandığımız device yolu verilmiştir.
+Devices package altında <b>DevicesFarm</b> isimli bir enum oluşturulmuştur. Bu enum içerisinde kullandığımız device bilgileri verilmiştir.
 
 ## Method
 Method package altında <b>ContactPagemethod</b> isimli bir java class oluşturulmuştur. Bu sınıf içerisinde testlerimizde kullandığımız methodlar yazılmıştır.   

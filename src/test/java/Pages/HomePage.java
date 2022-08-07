@@ -9,7 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-
+/**
+ * Home sayfasına ait elementleri bu sınıf içerisinde bulduk
+ */
 @Data
 public class HomePage {
 
