@@ -3,7 +3,7 @@ package Method;
 import TestNG.ContactManagerAPI;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
-import Pages.AddContactPage;
+import Pages.ContactPage;
 
 
 /**
@@ -13,31 +13,25 @@ import Pages.AddContactPage;
 
 public class ContactPagemethod {
 
-    AddContactPage addContactPage;
+    ContactPage contactPage;
 
 
     public ContactPagemethod(){
         PageFactory.initElements(new AppiumFieldDecorator(ContactManagerAPI.Driver), this);
-        addContactPage= new AddContactPage();
+        contactPage = new ContactPage();
     }
 
 
 
     public void Name(String name){
-
-        addContactPage.getContactNameField().setValue(name);
-
+        contactPage.getContactNameField().setValue(name);
     }
 
-
-
     public void setMail(String mail){
-        addContactPage.getContactEmailField().setValue(mail);
-
+        contactPage.getContactEmailField().setValue(mail);
     }
 
     public void setPhone(String phone){
-        addContactPage.getContactPhoneField().setValue(phone);
-
+        contactPage.getContactPhoneField().setValue(phone);
     }
 }

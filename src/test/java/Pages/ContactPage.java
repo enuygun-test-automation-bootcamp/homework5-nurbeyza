@@ -10,11 +10,11 @@ import org.openqa.selenium.support.PageFactory;
 
 
 @Data
-public class AddContactPage {
+public class ContactPage {
 
 
 
-    public AddContactPage(){
+    public ContactPage(){
         PageFactory.initElements(new AppiumFieldDecorator(ContactManagerAPI.Driver), this);
     }
 
@@ -51,8 +51,6 @@ public class AddContactPage {
 
     @AndroidFindBy(id = "contactEmailTypeSpinner")
     private MobileElement contactEmailDrop;
-
-
 
 
     @AndroidFindBy(id = "contactSaveButton")

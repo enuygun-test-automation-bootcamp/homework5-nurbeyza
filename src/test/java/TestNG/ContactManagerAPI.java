@@ -8,7 +8,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import Pages.AddContactPage;
+import Pages.ContactPage;
 import Pages.HomePage;
 import Utility.DeviceFarmUtility;
 import com.github.javafaker.service.FakeValuesService;
@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 public class ContactManagerAPI {
     public static AppiumDriver<?> Driver;
 
-    AddContactPage addContactPage;
+    ContactPage contactPage;
     ContactPagemethod methodc;
     DesiredCapabilities capabilities;
     HomePage homePage;
@@ -52,7 +52,7 @@ public class ContactManagerAPI {
         capabilities.setCapability("app", new File("src/test/resources/apps/ContactManager.apk").getAbsolutePath());
         Driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         homePage = new HomePage();
-        addContactPage = new AddContactPage();
+        contactPage = new ContactPage();
         methodc=new ContactPagemethod();
 
     }
@@ -62,7 +62,7 @@ public class ContactManagerAPI {
     public void openAddContactOnOreo() throws NullPointerException, InterruptedException {
         homePage.getAddContactBtn().click();
         Driver.manage().timeouts().implicitlyWait(15, TimeUnit.MINUTES);
-        Assert.assertEquals(addContactPage.getTitle().getText(),"Add Contact");
+        Assert.assertEquals(contactPage.getTitle().getText(),"Add Contact");
     }
 
 
@@ -71,10 +71,10 @@ public class ContactManagerAPI {
     public void checkTitle() throws InterruptedException {
         Driver.manage().timeouts().implicitlyWait(15, TimeUnit.MINUTES);
 
-        Assert.assertEquals(addContactPage.getTargetAccountTitle().getText(), "Target Account");
-        Assert.assertEquals(addContactPage.getContactNameTitle().getText(),"Contact Name");
-        Assert.assertEquals(addContactPage.getConcactPhoneTitle().getText(), "Contact Phone");
-        Assert.assertEquals(addContactPage.getContactMailTitle().getText(), "Contact Email");
+        Assert.assertEquals(contactPage.getTargetAccountTitle().getText(), "Target Account");
+        Assert.assertEquals(contactPage.getContactNameTitle().getText(),"Contact Name");
+        Assert.assertEquals(contactPage.getConcactPhoneTitle().getText(), "Contact Phone");
+        Assert.assertEquals(contactPage.getContactMailTitle().getText(), "Contact Email");
 
     }
 
@@ -84,10 +84,10 @@ public class ContactManagerAPI {
     public void nameControl() throws InterruptedException {
         String num="2";
         methodc.Name(num);
-        Assert.assertEquals(addContactPage.getContactNameField().getText(),num);
+        Assert.assertEquals(contactPage.getContactNameField().getText(),num);
         Driver.manage().timeouts().implicitlyWait(15, TimeUnit.MINUTES);
         //İnputu temizliyoruz
-        addContactPage.getContactNameField().clear();
+        contactPage.getContactNameField().clear();
     }
 
     //Bu test içerisinde mail inputuna "@" karakteri girebiliyor muyuz onu test ediyoruz.
@@ -96,10 +96,10 @@ public class ContactManagerAPI {
         String character="@";
         methodc.setMail(character);
         Driver.manage().timeouts().implicitlyWait(15, TimeUnit.MINUTES);
-        Assert.assertEquals(addContactPage.getContactEmailField().getText(),character);
+        Assert.assertEquals(contactPage.getContactEmailField().getText(),character);
 
         //İnputu temizliyoruz
-        addContactPage.getContactEmailField().clear();
+        contactPage.getContactEmailField().clear();
 
     }
 
@@ -115,7 +115,7 @@ public class ContactManagerAPI {
         methodc.setMail(email);
         methodc.setPhone(numPhone);
 
-        addContactPage.getContactSaveBtn().click();
+        contactPage.getContactSaveBtn().click();
 
     }
 
@@ -139,7 +139,7 @@ public class ContactManagerAPI {
         String phoneNumCheck;
         methodc.setMail(phoneNum);
         Driver.manage().timeouts().implicitlyWait(15, TimeUnit.MINUTES);
-        phoneNumCheck=addContactPage.getContactPhoneField().getText();
+        phoneNumCheck= contactPage.getContactPhoneField().getText();
         Assert.assertEquals(phoneNumCheck.length(),11);
 
     }
