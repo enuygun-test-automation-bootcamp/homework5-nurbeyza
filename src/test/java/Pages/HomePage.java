@@ -27,7 +27,7 @@ public class HomePage {
     private MobileElement invisibleCheck;
 
     //kayıt olan kullanıcının kontrolü için element bilgisi
-    @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.ListView")
+    @AndroidFindBy(id = "com.example.android.contactmanager:id/contactList")
     private List<MobileElement> userAdd;
 
 }

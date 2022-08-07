@@ -57,6 +57,7 @@ public class ContactManagerAPI {
 
     }
 
+
     //Homepage sayfasında butona tıklıyoruz ve AddPage sayfasının açıldığını kontrol ediyoruz.
     @Test(priority = 1)
     public void openAddContactOnOreo() throws NullPointerException, InterruptedException {
@@ -103,6 +104,18 @@ public class ContactManagerAPI {
 
     }
 
+    //Phone inputuna standart olarak alan kodu hariç birlikte 11 karakter girilebiliyor,
+    // bu testimizde 11'den fazla karakter girebiliyor muyuz onu test ediyoruz.(App'de alan kodu bulunmuyor.)
+    @Test(priority = 4)
+    public void phoneNumberOfCharacter() throws InterruptedException {
+        String phoneNum="055748695522563333";
+        String phoneNumCheck;
+        methodc.setMail(phoneNum);
+        Driver.manage().timeouts().implicitlyWait(15, TimeUnit.MINUTES);
+        phoneNumCheck= contactPage.getContactPhoneField().getText();
+        Assert.assertEquals(phoneNumCheck.length(),11);
+
+    }
 
 
 
@@ -125,24 +138,16 @@ public class ContactManagerAPI {
     //Kullanıcıyı kayıt olmuş mu onu test ediyoruz.
     @Test(priority = 7)
     public void userAddCheck(){
-       homePage.getUserAdd().get(0).click();
+       for(int i=0;i<homePage.getUserAdd().size();i++) {
+           if(username.equals(homePage.getUserAdd().get(i))){
+               Assert.assertEquals(username,homePage.getUserAdd().get(i));
+           }
+       }
     }
 
 
 
 
-    //Phone inputuna standart olarak alan kodu hariç birlikte 11 karakter girilebiliyor,
-    // bu testimizde 11'den fazla karakter girebiliyor muyuz onu test ediyoruz.(App'de alan kodu bulunmuyor.)
-    @Test(priority = 4)
-    public void phoneNumberOfCharacter() throws InterruptedException {
-        String phoneNum="055748695522563333";
-        String phoneNumCheck;
-        methodc.setMail(phoneNum);
-        Driver.manage().timeouts().implicitlyWait(15, TimeUnit.MINUTES);
-        phoneNumCheck= contactPage.getContactPhoneField().getText();
-        Assert.assertEquals(phoneNumCheck.length(),11);
-
-    }
 
 
 
